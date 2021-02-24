@@ -52,7 +52,6 @@
     .App main .head {
       display: flex;
       justify-content: space-between;
-      padding: 0 20%;
       width: 100%; }
     .App main .prodContainer {
       display: grid;
@@ -69,5 +68,3 @@
         display: flex;
         justify-content: center;
         align-items: center; }
-
-/*# sourceMappingURL=App.css.map */
