@@ -1,15 +1,18 @@
 import logo from "../../assets/aerolab-logo.svg";
 import coin from "../../assets/icons/coin.svg";
 import portada from "../../assets/header-x1.png";
+import { useContext } from "react";
+import {UserContext} from "../../context/UserContext.jsx";
 export default function Header() {
+  const {user} = useContext(UserContext);
   return (
     <header className="header">
       <section className="upBar">
         <img src={logo} alt="logo" id="headerLogo" />
         <div className="upBarInfo">
-          <h3>SantiUriguen</h3>
+          <h3>{user.name}</h3>
           <div>
-            <p>2500</p>
+            <p>{user.points}</p>
             <img src={coin} alt="" />
           </div>
         </div>

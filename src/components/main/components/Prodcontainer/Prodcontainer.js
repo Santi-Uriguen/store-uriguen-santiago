@@ -1,16 +1,17 @@
+import { useEffect, useContext } from "react";
+import { ProdContext } from "../../../../context/ProductContext.jsx";
 import Card from "./components/Card.js";
 export default function Prodcontainer() {
+  const {prod} = useContext(ProdContext);
   return (
     <section className="prodContainer">
-      <Card number="1"/>
-      <Card number="2"/>
-      <Card number="3"/>
-      <Card number="4"/>
-      <Card number="5"/>
-      <Card number="6"/>
-      <Card number="7"/>
-      <Card number="8"/>
-      <Card number="9"/>
+      <div className="product-container">
+        {prod &&
+          prod.map((prod, index) => {
+            console.log(prod);
+            return <Card {...prod} key={`${prod._id}-${index}`} />;
+          })}
+      </div>
     </section>
   );
 }
