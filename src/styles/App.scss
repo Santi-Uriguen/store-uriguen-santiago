@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 .App {
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   .header {
@@ -18,6 +19,7 @@
       .upBarInfo {
         display: flex;
         align-items: center;
+        width: 25%;
         h3 {
           font-family: "Source Sans Pro", sans-serif;
           font-size: 24px;
@@ -58,27 +60,71 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
     .head {
       display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .prodContainer {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      width: 100%;
-      justify-content: center;
-      div {
-        justify-self: center;
-        align-self: center;
-        border: 1px solid black;
-        width: 50px;
-        height: 50px;
-        margin: 10px 20px;
-        display:flex;
+      justify-content: flex-start;
+      width: 80%;
+      margin: 0 10%;
+      align-items: center;
+      span {
+        background-color: #acacac;
+        height: 2vw;
+        width: 2px;
+        margin: auto;
+      }
+      .filters {
+        margin-left: 2%;
+        display: flex;
         justify-content: center;
         align-items: center;
+        width: 70%;
+        color: #acacac;
+        .filt {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          background-color: #ededed;
+          margin: 0 5%;
+          width: 15%;
+          height: 2vw;
+        }
       }
     }
+    .pageButton {
+      width: 3vw;
+      height: 3vw;
+    }
+    .prodContainer {
+      width: 100%;
+      .product-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 80%;
+        justify-content: center;
+        margin: 0 10%;
+        .card {
+          box-shadow: 3px 3px 8px 0px rgba(108, 108, 108, 0.5);
+          -webkit-box-shadow: 3px 3px 8px 0px rgba(108, 108, 108, 0.5);
+          -moz-box-shadow: 3px 3px 8px 0px rgba(108, 108, 108, 0.5);
+          background-color: white;
+          justify-self: center;
+          align-self: center;
+          margin: 10px 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .hidden {
+        display: none;
+      }
+    }
+  }.footer{
+    display:flex;
+    justify-content:space-between;
+    width:80%;
   }
 }

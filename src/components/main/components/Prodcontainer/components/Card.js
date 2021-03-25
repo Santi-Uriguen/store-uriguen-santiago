@@ -1,6 +1,6 @@
 export default function Card(props) {
   return (
-    <div>
+    <div className="card">
       <div>
         <img src={props.img.url}></img>
       </div>
@@ -11,3 +11,4 @@ export default function Card(props) {
     </div>
   );
 }
+

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 .App {
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column; }
   .App .header {
@@ -16,7 +17,8 @@
         height: 36px; }
       .App .header .upBar .upBarInfo {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        width: 25%; }
         .App .header .upBar .upBarInfo h3 {
           font-family: "Source Sans Pro", sans-serif;
           font-size: 24px;
@@ -48,23 +50,63 @@
   .App main {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin-top: 5%; }
     .App main .head {
       display: flex;
-      justify-content: space-between;
-      width: 100%; }
-    .App main .prodContainer {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      width: 100%;
-      justify-content: center; }
-      .App main .prodContainer div {
-        justify-self: center;
-        align-self: center;
-        border: 1px solid black;
-        width: 50px;
-        height: 50px;
-        margin: 10px 20px;
+      justify-content: flex-start;
+      width: 80%;
+      margin: 0 10%;
+      align-items: center; }
+      .App main .head span {
+        background-color: #acacac;
+        height: 2vw;
+        width: 2px;
+        margin: auto; }
+      .App main .head .filters {
+        margin-left: 2%;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        width: 70%;
+        color: #acacac; }
+        .App main .head .filters .filt {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          background-color: #ededed;
+          margin: 0 5%;
+          width: 15%;
+          height: 2vw; }
+    .App main .pageButton {
+      width: 3vw;
+      height: 3vw; }
+    .App main .prodContainer {
+      width: 100%; }
+      .App main .prodContainer .product-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 80%;
+        justify-content: center;
+        margin: 0 10%; }
+        .App main .prodContainer .product-container .card {
+          box-shadow: 3px 3px 8px 0px rgba(108, 108, 108, 0.5);
+          -webkit-box-shadow: 3px 3px 8px 0px rgba(108, 108, 108, 0.5);
+          -moz-box-shadow: 3px 3px 8px 0px rgba(108, 108, 108, 0.5);
+          background-color: white;
+          justify-self: center;
+          align-self: center;
+          margin: 10px 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+      .App main .prodContainer .hidden {
+        display: none; }
+  .App .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; }
+
+/*# sourceMappingURL=App.css.map */
