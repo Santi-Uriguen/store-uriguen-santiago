@@ -19,6 +19,7 @@ export default function PageButton() {
     <img
       src={img ? arrowLeft :arrowRight}
       onClick={handleClick}
+      alt="arrow"
       className="pageButton"
     ></img>
   );

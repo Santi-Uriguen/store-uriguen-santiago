@@ -1,4 +1,4 @@
-import Head from "./components/Head.js";
+import Head from "./components/Head/Head.js";
 import Prodcontainer from "./components/Prodcontainer/Prodcontainer.js"
 import Footer from"./components/Footer.js"
 export default function Main() {

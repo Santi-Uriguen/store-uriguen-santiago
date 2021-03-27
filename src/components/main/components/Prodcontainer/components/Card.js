@@ -4,9 +4,10 @@ export default function Card(props) {
       <div>
         <img src={props.img.url}></img>
       </div>
-      <div>
-        <h4>{props.category}</h4>
-        <p>{props.name}</p>
+      <span></span>
+      <div className="cardData">
+        <p>{props.category}</p>
+        <h4>{props.name}</h4>
       </div>
     </div>
   );

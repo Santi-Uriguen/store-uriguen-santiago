@@ -81,7 +81,8 @@
           height: 2vw; }
     .App main .pageButton {
       width: 3vw;
-      height: 3vw; }
+      height: 3vw;
+      cursor: pointer; }
     .App main .prodContainer {
       width: 100%; }
       .App main .prodContainer .product-container {
@@ -102,6 +103,15 @@
           flex-direction: column;
           justify-content: center;
           align-items: center; }
+          .App main .prodContainer .product-container .card span {
+            width: 80%;
+            height: 0.5px;
+            background-color: #acacac; }
+          .App main .prodContainer .product-container .card .cardData {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
       .App main .prodContainer .hidden {
         display: none; }
   .App .footer {

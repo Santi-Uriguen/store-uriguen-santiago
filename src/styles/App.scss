@@ -95,6 +95,7 @@
     .pageButton {
       width: 3vw;
       height: 3vw;
+      cursor: pointer;
     }
     .prodContainer {
       width: 100%;
@@ -116,15 +117,27 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          span {
+            width: 80%;
+            height: 0.5px;
+            background-color: #acacac;
+          }
+          .cardData {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
         }
       }
       .hidden {
         display: none;
       }
     }
-  }.footer{
-    display:flex;
-    justify-content:space-between;
-    width:80%;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
   }
 }

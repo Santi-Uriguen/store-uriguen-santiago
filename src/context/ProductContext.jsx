@@ -16,7 +16,6 @@ class ProdService {
       if (response.status !== 200) {
         throw new Error(response);
       }
-
       const data = await response.json();
       return data;
     } catch (err) {
