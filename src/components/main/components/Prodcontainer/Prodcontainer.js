@@ -1,9 +1,9 @@
-import {useContext } from "react";
-import { ProdContext } from "../../../../context/ProductContext.jsx";
+import {useContext, useEffect } from "react";
+import { ProdContext } from "../../../../context/ProductContext.js";
 import Card from "./components/Card.js";
 export default function Prodcontainer() {
   let { prod } = useContext(ProdContext);
-
+useEffect(()=>{console.log("Aa")})
   return (
     <section className="prodContainer">
       <div className="product-container" id="pageOne">

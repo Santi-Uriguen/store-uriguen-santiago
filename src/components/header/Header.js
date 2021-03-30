@@ -2,7 +2,7 @@ import logo from "../../assets/aerolab-logo.svg";
 import coin from "../../assets/icons/coin.svg";
 import portada from "../../assets/header-x1.png";
 import { useContext } from "react";
-import {UserContext} from "../../context/UserContext.jsx";
+import {UserContext} from "../../context/UserContext.js";
 export default function Header() {
   const {user} = useContext(UserContext);
   return (

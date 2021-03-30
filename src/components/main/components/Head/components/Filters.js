@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ProdContext } from "../../../../../context/ProductContext.jsx";
+import { ProdContext } from "../../../../../context/ProductContext.js";
 export default function Filter() {
   const { setProds } = useContext(ProdContext);
   const { prod } = useContext(ProdContext);
@@ -19,10 +19,9 @@ export default function Filter() {
             return 0;
           }
         });
-        console.log(1)
-        console.log(sortedProd);
         setProds(sortedProd);
-        break;
+        console.log(prod)
+                break;
       case 2:
         sortedProd = sortedProd.sort((a, b) => {
           if (a.cost > b.cost) {
