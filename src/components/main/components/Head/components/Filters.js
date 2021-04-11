@@ -1,13 +1,10 @@
 import { useContext } from "react";
 import { ProdContext } from "../../../../../context/ProductContext.js";
 export default function Filter() {
-  const { setProds } = useContext(ProdContext);
-  const { prod } = useContext(ProdContext);
+  const { prod, setProds, aver } = useContext(ProdContext);
   const sorter = (e) => {
     const filter = parseInt(e.target.value);
-    console.log(filter);
     let sortedProd = prod;
-    console.log(sortedProd)
     switch (filter) {
       case 1:
         sortedProd = sortedProd.sort((a, b) => {
@@ -20,7 +17,6 @@ export default function Filter() {
           }
         });
         setProds(sortedProd);
-        console.log(prod)
                 break;
       case 2:
         sortedProd = sortedProd.sort((a, b) => {
@@ -32,8 +28,6 @@ export default function Filter() {
             return 0;
           }
         });
-        console.log(2)
-        console.log(sortedProd);
         setProds(sortedProd);
         break;
       case 3:
@@ -46,13 +40,9 @@ export default function Filter() {
             return 0;
           }
         });
-        console.log(3)
-        console.log(sortedProd);
         setProds(sortedProd);
         break;
       default:
-        console.log("default")
-        console.log(sortedProd);
         break;
     }
   };

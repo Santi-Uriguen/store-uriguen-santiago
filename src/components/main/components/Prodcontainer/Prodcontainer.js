@@ -1,9 +1,8 @@
-import {useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { ProdContext } from "../../../../context/ProductContext.js";
 import Card from "./components/Card.js";
 export default function Prodcontainer() {
   let { prod } = useContext(ProdContext);
-useEffect(()=>{console.log("Aa")})
   return (
     <section className="prodContainer">
       <div className="product-container" id="pageOne">
@@ -11,7 +10,7 @@ useEffect(()=>{console.log("Aa")})
           prod.map((prod, index) => {
             if (index <= 15) {
               return <Card {...prod} key={`${prod._id}-${index}`} />;
-            }else return
+            } else return("");
           })}
       </div>
       <div className="product-container hidden" id="pageTwo">
@@ -19,7 +18,7 @@ useEffect(()=>{console.log("Aa")})
           prod.map((prod, index) => {
             if (index > 15) {
               return <Card {...prod} key={`${prod._id}-${index}`} />;
-            }else return
+            } else return("");
           })}
       </div>
     </section>

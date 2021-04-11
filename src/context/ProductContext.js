@@ -22,6 +22,22 @@ class ProdService {
       console.log(err);
     }
   }
+  static getHistory() {
+    let request = new XMLHttpRequest();
+    request.open(
+      "GET",
+      "https://coding-challenge-api.aerolab.co/user/history",
+      false
+    );
+    request.setRequestHeader("Content-Type", "application/json");
+    request.setRequestHeader("Accept", "application/json");
+    request.setRequestHeader(
+      "Authorization",
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDYzMzUxMWEyNGI1NzAwMjBjNmM3MTgiLCJpYXQiOjE2MTcxMTQzODV9.yyna3Evs1zqxQ6uU9w9PjmdvhRLgtoOpvdkcmjajG-U"
+    );
+    request.send();
+    return request.response;
+  }
 }
 export const ProdContext = React.createContext();
 
@@ -31,11 +47,21 @@ export default function ProdContextProvider({ children }) {
     const newProd = await ProdService.getProducts();
     setProds(newProd);
   };
+  const showHistory = (param) => {
+    if (param === "home") {
+      let history = ProdService.getHistory();
+      history = JSON.parse(history);
+      setProds(history);
+    }else{
+      getProds()
+    }
+  };
   useEffect(() => {
     getProds();
+    console.log(prod);
   }, []);
   return (
-    <ProdContext.Provider value={{ prod, setProds }}>
+    <ProdContext.Provider value={{ prod, setProds, showHistory }}>
       {children}
     </ProdContext.Provider>
   );
