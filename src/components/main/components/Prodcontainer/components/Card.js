@@ -15,11 +15,7 @@ export default function Card(props) {
   };
   const handleClick = () => {
     let request = new XMLHttpRequest();
-    request.open(
-      "POST",
-      "https://coding-challenge-api.aerolab.co/redeem",
-      false
-    );
+    request.open("POST", "https://coding-challenge-api.aerolab.co/redeem");
     request.setRequestHeader("Content-Type", "application/json");
     request.setRequestHeader("Accept", "application/json");
     request.setRequestHeader(

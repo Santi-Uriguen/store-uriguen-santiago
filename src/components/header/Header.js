@@ -50,7 +50,7 @@ export default function Header() {
           <h3>{user.name}</h3>
           <div className="user">
             <p>{user.points}</p>
-            <img src={coin} alt="" />
+            <img src={coin} alt="coin icon" />
           </div>
           <img
             src={history}
@@ -68,7 +68,7 @@ export default function Header() {
             ></img>
             <div className="addListHid" id="addList">
               <div className="addHead">
-                <h3>Choose an amount</h3>
+                <h3>Choose the amount</h3>
                 <img src={closeBtn} onClick={addClick}></img>
               </div>
               <ul>
