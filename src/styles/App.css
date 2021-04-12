@@ -206,6 +206,10 @@
                 width: 60%;
                 color: #616161;
                 cursor: pointer; }
+              .App main .prodContainer .product-container .card:hover .redeem .hoverInfo .successCheck {
+                display: none; }
+              .App main .prodContainer .product-container .card:hover .redeem .hoverInfo .failCheck {
+                display: none; }
           .App main .prodContainer .product-container .card .redeem {
             display: flex;
             justify-content: flex-end;
@@ -230,6 +234,46 @@
                 font-size: 90%; }
             .App main .prodContainer .product-container .card .redeem .hoverInfo {
               display: none; }
+            .App main .prodContainer .product-container .card .redeem .successfullRedeem {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: 0;
+              height: 100%;
+              width: 100%;
+              background-color: rgba(92, 236, 60, 0.7);
+              transition: 1.5s; }
+              .App main .prodContainer .product-container .card .redeem .successfullRedeem .priceInfo {
+                display: none; }
+              .App main .prodContainer .product-container .card .redeem .successfullRedeem button {
+                display: none; }
+              .App main .prodContainer .product-container .card .redeem .successfullRedeem .successCheck {
+                display: block;
+                width: 15%; }
+              .App main .prodContainer .product-container .card .redeem .successfullRedeem .failCheck {
+                display: none; }
+            .App main .prodContainer .product-container .card .redeem .failRedeem {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: 0;
+              height: 100%;
+              width: 100%;
+              background-color: rgba(255, 16, 16, 0.7);
+              transition: 1.5s; }
+              .App main .prodContainer .product-container .card .redeem .failRedeem .priceInfo {
+                display: none; }
+              .App main .prodContainer .product-container .card .redeem .failRedeem button {
+                display: none; }
+              .App main .prodContainer .product-container .card .redeem .failRedeem .successCheck {
+                display: none; }
+              .App main .prodContainer .product-container .card .redeem .failRedeem .failCheck {
+                display: block;
+                width: 30%; }
           .App main .prodContainer .product-container .card span {
             width: 80%;
             height: 0.5px;

@@ -1,13 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../../../../context/UserContext.js";
 import buyBlue from "../../../../../assets/icons/buy-blue.svg";
 import coin from "../../../../../assets/icons/coin.svg";
+import check from "../../../../../assets/icons/check.svg";
+import fail from "../../../../../assets/icons/fail.svg";
 
 export default function Card(props) {
+  const [className, changeClass] = useState("hoverInfo");
   const { user } = useContext(UserContext);
   const handleClick = () => {
     let request = new XMLHttpRequest();
-    request.open("POST", "https://coding-challenge-api.aerolab.co/redeem");
+    request.open(
+      "POST",
+      "https://coding-challenge-api.aerolab.co/redeem",
+      false
+    );
     request.setRequestHeader("Content-Type", "application/json");
     request.setRequestHeader("Accept", "application/json");
     request.setRequestHeader(
@@ -18,6 +25,17 @@ export default function Card(props) {
       productId: props._id,
     };
     request.send(JSON.stringify(body));
+    changeClass("successfullRedeem");
+    if (request.status === 200) {
+      setTimeout(() => {
+        changeClass("hoverInfo");
+      }, 2500);
+    } else {
+      changeClass("failRedeem");
+      setTimeout(() => {
+        changeClass("hoverInfo");
+      }, 2500);
+    }
   };
   return (
     <div className="card">
@@ -29,10 +47,10 @@ export default function Card(props) {
               <img src={coin} alt="coin"></img>
             </div>
           ) : (
-            <img src={buyBlue} alt="buyBlue"></img>
+            <img src={buyBlue} alt="buy icon"></img>
           )}
         </div>
-        <div className="hoverInfo">
+        <div className={className} id="hoverInfo">
           <div className="priceInfo">
             <h2>{props.cost}</h2>
             <img src={coin} alt="coin"></img>
@@ -42,6 +60,13 @@ export default function Card(props) {
           ) : (
             <button onClick={handleClick}>Redeem now</button>
           )}
+          <img
+            src={check}
+            alt="success check icon"
+            className="successCheck"
+            id="check"
+          />
+          <img src={fail} alt="failure icon" className="failCheck" id="fail" />
         </div>
       </div>
       <div>
