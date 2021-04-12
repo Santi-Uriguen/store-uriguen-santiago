@@ -1,13 +1,18 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../../../../../context/UserContext.js";
 import buyBlue from "../../../../../assets/icons/buy-blue.svg";
+import buyWhite from "../../../../../assets/icons/buy-white.svg";
 import coin from "../../../../../assets/icons/coin.svg";
 import check from "../../../../../assets/icons/check.svg";
 import fail from "../../../../../assets/icons/fail.svg";
 
 export default function Card(props) {
   const [className, changeClass] = useState("hoverInfo");
+  const [icon, changeIcon] = useState(buyBlue);
   const { user } = useContext(UserContext);
+  const handleHover = () => {
+    icon === buyBlue ? changeIcon(buyWhite) : changeIcon(buyBlue);
+  };
   const handleClick = () => {
     let request = new XMLHttpRequest();
     request.open(
@@ -38,7 +43,7 @@ export default function Card(props) {
     }
   };
   return (
-    <div className="card">
+    <div className="card" onMouseEnter={handleHover} onMouseLeave={handleHover}>
       <div className="redeem">
         <div className="redeemable">
           {props.cost > user.points ? (
@@ -47,7 +52,7 @@ export default function Card(props) {
               <img src={coin} alt="coin"></img>
             </div>
           ) : (
-            <img src={buyBlue} alt="buy icon"></img>
+            <img src={icon} alt="buy icon"></img>
           )}
         </div>
         <div className={className} id="hoverInfo">
@@ -70,7 +75,7 @@ export default function Card(props) {
         </div>
       </div>
       <div>
-        <img src={props.img.url}></img>
+        <img src={props.img.url} alt={props.name}></img>
       </div>
       <span></span>
       <div className="cardData">

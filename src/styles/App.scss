@@ -19,7 +19,7 @@
       .upBarInfo {
         display: flex;
         align-items: center;
-        width: 25%;
+        width: 30%;
         h3 {
           font-family: "Source Sans Pro", sans-serif;
           font-size: 24px;
@@ -192,6 +192,13 @@
       width: 3vw;
       height: 3vw;
       cursor: pointer;
+      background-size: contain;
+    }
+    .right {
+      background-image: url("../assets/icons/arrow-right.svg");
+    }
+    .left {
+      background-image: url("../assets/icons/arrow-left.svg");
     }
     .prodContainer {
       width: 100%;
@@ -240,6 +247,9 @@
                   width: 60%;
                   color: #616161;
                   cursor: pointer;
+                  &:hover {
+                    color: #15dbff;
+                  }
                 }
                 .successCheck {
                   display: none;
@@ -389,6 +399,7 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
+    padding: 2% 0;
   }
   .historyFooter {
     display: none;

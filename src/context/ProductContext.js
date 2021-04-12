@@ -97,7 +97,6 @@ export default function ProdContextProvider({ children }) {
   };
   useEffect(() => {
     getProds();
-    console.log(prod);
   }, []);
   return (
     <ProdContext.Provider value={{ prod, filterFunction, showHistory }}>

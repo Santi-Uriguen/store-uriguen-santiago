@@ -5,10 +5,9 @@ import arrowDown from "../../../../../assets/icons/arrow-down-solid.svg";
 import categoryIcon from "../../../../../assets/icons/category.svg";
 
 export default function Filter() {
-  const { prod, filterFunction } = useContext(ProdContext);
+  const { filterFunction } = useContext(ProdContext);
   const sorter = (e) => {
     const filter = parseInt(e.target.value);
-    console.log(e.target.value);
     filterFunction(filter);
   };
   return (
