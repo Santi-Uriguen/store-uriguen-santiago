@@ -6,7 +6,7 @@ class ProdService {
     Authorization:
       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDYzMzUxMWEyNGI1NzAwMjBjNmM3MTgiLCJpYXQiOjE2MTcxMTQzODV9.yyna3Evs1zqxQ6uU9w9PjmdvhRLgtoOpvdkcmjajG-U",
   };
-  static async getProducts() {
+  static async getProducts(filterOption) {
     const headers = { headers: this.headers };
     try {
       const response = await fetch(
@@ -16,8 +16,44 @@ class ProdService {
       if (response.status !== 200) {
         throw new Error(response);
       }
-      const data = await response.json();
-      return data;
+      let data = await response.json();
+      switch (filterOption) {
+        case 1:
+          data = data.sort((a, b) => {
+            if (a.category > b.category) {
+              return 1;
+            } else if (a.category < b.category) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
+          return data;
+        case 2:
+          data = data.sort((a, b) => {
+            if (a.cost > b.cost) {
+              return 1;
+            } else if (a.cost < b.cost) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
+          return data;
+        case 3:
+          data = data.sort((a, b) => {
+            if (a.cost < b.cost) {
+              return 1;
+            } else if (a.cost > b.cost) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
+          return data;
+        default:
+          return data;
+      }
     } catch (err) {
       console.log(err);
     }
@@ -43,8 +79,8 @@ export const ProdContext = React.createContext();
 
 export default function ProdContextProvider({ children }) {
   const [prod, setProds] = useState([]);
-  const getProds = async () => {
-    const newProd = await ProdService.getProducts();
+  const getProds = async (filterOption) => {
+    const newProd = await ProdService.getProducts(filterOption);
     setProds(newProd);
   };
   const showHistory = (param) => {
@@ -52,16 +88,19 @@ export default function ProdContextProvider({ children }) {
       let history = ProdService.getHistory();
       history = JSON.parse(history);
       setProds(history);
-    }else{
-      getProds()
+    } else {
+      getProds();
     }
+  };
+  const filterFunction = (filterOption) => {
+    getProds(filterOption);
   };
   useEffect(() => {
     getProds();
     console.log(prod);
   }, []);
   return (
-    <ProdContext.Provider value={{ prod, setProds, showHistory }}>
+    <ProdContext.Provider value={{ prod, filterFunction, showHistory }}>
       {children}
     </ProdContext.Provider>
   );

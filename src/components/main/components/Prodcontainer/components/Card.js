@@ -37,7 +37,11 @@ export default function Card(props) {
             <h2>{props.cost}</h2>
             <img src={coin} alt="coin"></img>
           </div>
-          <button onClick={handleClick}>Redeem now</button>
+          {props.cost > user.points ? (
+            <span></span>
+          ) : (
+            <button onClick={handleClick}>Redeem now</button>
+          )}
         </div>
       </div>
       <div>
