@@ -263,7 +263,7 @@
             .App main .prodContainer .product-container .card .redeem .failRedeem .failCheck {
               display: block;
               width: 30%; }
-        .App main .prodContainer .product-container .card span {
+        .App main .prodContainer .product-container .card .line {
           width: 80%;
           height: 0.5px;
           background-color: #acacac; }

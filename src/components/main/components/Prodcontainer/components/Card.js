@@ -93,7 +93,7 @@ export default function Card(props) {
       <div>
         <img src={props.img.url} alt={props.name}></img>
       </div>
-      <span></span>
+      <span className="line"></span>
       <div className="cardData">
         <p>{props.category}</p>
         <h4>{props.name}</h4>
