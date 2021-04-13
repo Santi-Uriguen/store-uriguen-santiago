@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ProdContext } from "../../../../context/ProductContext.js";
 import Card from "./components/Card.js";
 export default function Prodcontainer() {

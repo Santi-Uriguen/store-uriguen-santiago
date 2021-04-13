@@ -308,10 +308,16 @@
         height: 0.5px;
         background-color: #acacac; }
       .App main .historyContainer .card .cardData {
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; }
+        align-items: flex-start;
+        color: #777676; }
+        .App main .historyContainer .card .cardData p {
+          margin: 15% 0 2% 0; }
+        .App main .historyContainer .card .cardData h4 {
+          margin: 0 0 15% 0; }
   .App main .footer {
     width: 100%;
     display: flex;
@@ -330,8 +336,13 @@
       width: 85%;
       height: 0.5px;
       margin: 1% 0 2% 0; }
-    .App main .footer .historyFooter {
-      display: none; }
+  .App main .historyFooter .footerInfo {
+    display: none; }
+  .App main .historyFooter span {
+    background-color: #acacac;
+    width: 85%;
+    height: 0.5px;
+    margin: 1% 0 2% 0; }
 
 @media (min-width: 700px) {
   .App main .prodContainer .product-container .card:hover .redeem {
