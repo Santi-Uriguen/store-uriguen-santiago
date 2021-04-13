@@ -45,7 +45,6 @@ export default function Card(props) {
   const handleTouch = () => {
     let old = document.getElementsByClassName("hoverInfoMobile");
     if (old.length > 0) {
-      console.log(old);
       for (let i = 0; i < old.length; i++) {
         old[i].className = "hoverInfo";
       }

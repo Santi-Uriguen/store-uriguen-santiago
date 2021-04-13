@@ -69,7 +69,7 @@ export default function Header() {
             <div className="addListHid" id="addList">
               <div className="addHead">
                 <h3>Choose the amount</h3>
-                <img src={closeBtn} onClick={addClick}></img>
+                <img src={closeBtn} onClick={addClick} alt="close button"></img>
               </div>
               <ul>
                 <li value="1000" onClick={handleAdding}>
@@ -87,7 +87,7 @@ export default function Header() {
         </div>
       </section>
       <section className="banner">
-        <img src={portada} alt="" />
+        <img src={portada} alt="banner electronics" />
         <h1>Electrónica</h1>
       </section>
     </header>
