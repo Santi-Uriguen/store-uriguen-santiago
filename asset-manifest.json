@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/store-uriguen-santiago/static/css/main.4a804b3f.chunk.css",
+    "main.js": "/store-uriguen-santiago/static/js/main.ec87f21c.chunk.js",
+    "main.js.map": "/store-uriguen-santiago/static/js/main.ec87f21c.chunk.js.map",
+    "runtime-main.js": "/store-uriguen-santiago/static/js/runtime-main.e0059495.js",
+    "runtime-main.js.map": "/store-uriguen-santiago/static/js/runtime-main.e0059495.js.map",
+    "static/js/2.d92454c7.chunk.js": "/store-uriguen-santiago/static/js/2.d92454c7.chunk.js",
+    "static/js/2.d92454c7.chunk.js.map": "/store-uriguen-santiago/static/js/2.d92454c7.chunk.js.map",
+    "static/js/3.e9977951.chunk.js": "/store-uriguen-santiago/static/js/3.e9977951.chunk.js",
+    "static/js/3.e9977951.chunk.js.map": "/store-uriguen-santiago/static/js/3.e9977951.chunk.js.map",
+    "index.html": "/store-uriguen-santiago/index.html",
+    "static/css/main.4a804b3f.chunk.css.map": "/store-uriguen-santiago/static/css/main.4a804b3f.chunk.css.map",
+    "static/js/2.d92454c7.chunk.js.LICENSE.txt": "/store-uriguen-santiago/static/js/2.d92454c7.chunk.js.LICENSE.txt",
+    "static/media/add-button.10809d1a.svg": "/store-uriguen-santiago/static/media/add-button.10809d1a.svg",
+    "static/media/aerolab-logo.0a8fb170.svg": "/store-uriguen-santiago/static/media/aerolab-logo.0a8fb170.svg",
+    "static/media/arrow-down-solid.e9ce41eb.svg": "/store-uriguen-santiago/static/media/arrow-down-solid.e9ce41eb.svg",
+    "static/media/App.css": "/store-uriguen-santiago/static/media/arrow-right.1bf72f3b.svg",
+    "static/media/arrow-up-solid.7a565b5f.svg": "/store-uriguen-santiago/static/media/arrow-up-solid.7a565b5f.svg",
+    "static/media/buy-blue.a015e192.svg": "/store-uriguen-santiago/static/media/buy-blue.a015e192.svg",
+    "static/media/buy-white.aecff4be.svg": "/store-uriguen-santiago/static/media/buy-white.aecff4be.svg",
+    "static/media/category.95e69101.svg": "/store-uriguen-santiago/static/media/category.95e69101.svg",
+    "static/media/check.d6c14971.svg": "/store-uriguen-santiago/static/media/check.d6c14971.svg",
+    "static/media/close.673245e0.svg": "/store-uriguen-santiago/static/media/close.673245e0.svg",
+    "static/media/coin.b8bc711d.svg": "/store-uriguen-santiago/static/media/coin.b8bc711d.svg",
+    "static/media/fail.b811ab71.svg": "/store-uriguen-santiago/static/media/fail.b811ab71.svg",
+    "static/media/header-x1.b6f067c6.png": "/store-uriguen-santiago/static/media/header-x1.b6f067c6.png",
+    "static/media/history.eb963fad.svg": "/store-uriguen-santiago/static/media/history.eb963fad.svg",
+    "static/media/home.889aba4f.svg": "/store-uriguen-santiago/static/media/home.889aba4f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0059495.js",
+    "static/js/2.d92454c7.chunk.js",
+    "static/css/main.4a804b3f.chunk.css",
+    "static/js/main.ec87f21c.chunk.js"
+  ]
+}
