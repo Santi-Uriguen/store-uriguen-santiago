@@ -20,23 +20,27 @@ export default function Card(props) {
     request.setRequestHeader("Accept", "application/json");
     request.setRequestHeader(
       "Authorization",
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDYzMzUxMWEyNGI1NzAwMjBjNmM3MTgiLCJpYXQiOjE2MTcxMTQzODV9.yyna3Evs1zqxQ6uU9w9PjmdvhRLgtoOpvdkcmjajG-U"
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDc0ZTFjNDc2NmZiNTAwMjRhYTg3OTYiLCJpYXQiOjE2MTgyNzI3MDh9.d_OkCE--ik9X6lupRN-peFbHfc6wNKQKGeH10YknKFg"
     );
     const body = {
       productId: props._id,
     };
     request.send(JSON.stringify(body));
-    changeClass("successfullRedeem");
-    if (request.status === 200) {
-      setTimeout(() => {
-        changeClass("hoverInfo");
-      }, 2500);
-    } else {
-      changeClass("failRedeem");
-      setTimeout(() => {
-        changeClass("hoverInfo");
-      }, 2500);
-    }
+    request.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        if (request.status === 200) {
+          changeClass("successfullRedeem");
+          setTimeout(() => {
+            changeClass("hoverInfo");
+          }, 2500);
+        } else {
+          changeClass("failRedeem");
+          setTimeout(() => {
+            changeClass("hoverInfo");
+          }, 2500);
+        }
+      }
+    };
   };
   return (
     <div className="card" onMouseEnter={handleHover} onMouseLeave={handleHover}>

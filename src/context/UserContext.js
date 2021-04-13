@@ -4,7 +4,7 @@ class UserService {
     "Content-Type": "application/json",
     Accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDYzMzUxMWEyNGI1NzAwMjBjNmM3MTgiLCJpYXQiOjE2MTcxMTQzODV9.yyna3Evs1zqxQ6uU9w9PjmdvhRLgtoOpvdkcmjajG-U",
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDc0ZTFjNDc2NmZiNTAwMjRhYTg3OTYiLCJpYXQiOjE2MTgyNzI3MDh9.d_OkCE--ik9X6lupRN-peFbHfc6wNKQKGeH10YknKFg",
   };
   static async getUserInfo() {
     const headers = { headers: this.headers };
@@ -43,9 +43,9 @@ export default function UserContextProvider({ children }) {
     const newUser = await UserService.getUserInfo();
     setUser(newUser);
   };
-  const pointsAdder =(amount)=>{
-    UserService.addPoints(amount)
-  }
+  const pointsAdder = (amount) => {
+    UserService.addPoints(amount);
+  };
   useEffect(() => {
     getUser();
   }, [user]);
