@@ -236,45 +236,6 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          &:hover {
-            .redeem {
-              justify-content: center;
-              .hoverInfo {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 0;
-                background-color: rgba(21, 219, 255, 0.7);
-                height: 100%;
-                width: 100%;
-                .priceInfo {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  color: white;
-                }
-                button {
-                  border-radius: 14px;
-                  border: none;
-                  height: 12%;
-                  width: 60%;
-                  color: #616161;
-                  cursor: pointer;
-                  &:hover {
-                    color: #15dbff;
-                  }
-                }
-                .successCheck {
-                  display: none;
-                }
-                .failCheck {
-                  display: none;
-                }
-              }
-            }
-          }
           .redeem {
             display: flex;
             justify-content: flex-end;
@@ -359,11 +320,18 @@
             background-color: #acacac;
           }
           .cardData {
+            width: 80%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            color: #616161;
+            align-items: flex-start;
+            color: #777676;
+            p {
+              margin: 15% 0 2% 0;
+            }
+            h4 {
+              margin: 0 0 15% 0;
+            }
           }
         }
       }
@@ -410,17 +378,80 @@
       }
     }
     .footer {
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      width: 80%;
-      padding: 2% 0;
-      #counterDown {
-        color: #616161;
+      .footerInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        padding: 2% 0 0 0;
+        #counterDown {
+          color: #616161;
+        }
+      }
+      span {
+        background-color: #acacac;
+        width: 85%;
+        height: 0.5px;
+        margin: 1% 0 2% 0;
+      }
+      .historyFooter {
+        display: none;
       }
     }
-    .historyFooter {
-      display: none;
+  }
+}
+@media (min-width: 700px) {
+  .App {
+    main {
+      .prodContainer {
+        .product-container {
+          .card {
+            &:hover {
+              .redeem {
+                justify-content: center;
+                .hoverInfo {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  position: absolute;
+                  top: 0;
+                  background-color: rgba(21, 219, 255, 0.7);
+                  height: 100%;
+                  width: 100%;
+                  .priceInfo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                  }
+                  button {
+                    border-radius: 14px;
+                    border: none;
+                    height: 12%;
+                    width: 60%;
+                    color: #616161;
+                    cursor: pointer;
+                    &:hover {
+                      color: #15dbff;
+                    }
+                  }
+                  .successCheck {
+                    display: none;
+                  }
+                  .failCheck {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -611,11 +642,11 @@
               text-align: center;
               p {
                 font-size: 0.85em;
-                margin: 10% 0 0 0;
+                margin: 15% 0 2% 0;
               }
               h4 {
                 font-size: 1em;
-                margin: 10% 0 20% 0;
+                margin: 0 0 15% 0;
               }
             }
           }
@@ -659,14 +690,17 @@
       }
     }
     .footer {
-      #counterDown {
-        text-align: center;
-        font-size: 0.8em;
-        width: 15%;
-      }
-      .pageButton {
-        width: 8%;
-        height: 5.5vw;
+      .footerInfo {
+        display: flex;
+        #counterDown {
+          text-align: center;
+          font-size: 0.8em;
+          width: 15%;
+        }
+        .pageButton {
+          width: 8%;
+          height: 5.5vw;
+        }
       }
     }
   }
